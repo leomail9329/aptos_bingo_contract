@@ -46,12 +46,12 @@ module overmind::bingo_events {
     }
 
     public fun new_join_game_event(
-        game_name: String,
+        name: String,
         player: address,
         numbers: vector<vector<u8>>,
         timestamp: u64
     ): JoinGameEvent {
-        JoinGameEvent { game_name, player, numbers, timestamp }
+        JoinGameEvent { name, player, numbers, timestamp }
     }
 
     public fun new_bingo_event(game_name: String, player: address, timestamp: u64): BingoEvent {
